@@ -1,14 +1,13 @@
 import './App.css'
-import {RouterProvider} from "react-router-dom";
-import routes from './routers'
+import {HashRouter} from "react-router-dom";
+import Router from './routers'
 
 function App() {
     return (
-        <>
-            <div className='App'>
-                <RouterProvider router={routes} />
-            </div>
-        </>
+       <HashRouter>
+           <Router/>
+       </HashRouter>
     )
 }
+
 export default App
