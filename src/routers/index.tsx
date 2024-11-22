@@ -1,6 +1,7 @@
 import {RouteObject, useRoutes} from 'react-router-dom';
 import Home from '@/pages/home';
 import Login from '@/pages/login';
+import Layout from '@/layout';
 
 
 /**
@@ -9,7 +10,13 @@ import Login from '@/pages/login';
 export const  constantRoutes: RouteObject[] = [
     {
         path: '/',
-        element: <Home/>
+        element: <Layout/>,
+        children: [
+            {
+                path: '/',
+                element: <Home/>
+            }
+        ]
     },
     {
         path: '/login',
